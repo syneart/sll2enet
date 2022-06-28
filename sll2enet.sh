@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # sll2enet Shell script by SyneArt <sa@syneart.com> 2022/06/28
 
 usage () {
@@ -20,8 +20,6 @@ EXPORT_PCAP_FILE="${1%.[^.]*}_enet.pcap"
 }
 
 sed "${sedi[@]}" 's/0000.*08 00/0000  00 00 00 00 00 00 00 00 00 00 00 00 08 00/g' ${TMP_FILE}
-
-echo hi
 
 for i in {1..15};
 do
